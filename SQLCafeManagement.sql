@@ -94,3 +94,19 @@ CREATE TABLE Membership
 	totalpoint FLOAT NOT NULL DEFAULT 0,
 )
 GO
+
+CREATE PROC USP_GetAccountByUserName
+@username nvarchar(100)
+AS
+BEGIN
+	SELECT * FROM dbo.Account WHERE UserName = @username
+END
+GO
+
+CREATE PROC USP_Login
+@username nvarchar(100), @password nvarchar(100)
+AS
+BEGIN
+	SELECT * FROM dbo.Account WHERE UserName = @username AND PassWord = @password
+END
+GO
