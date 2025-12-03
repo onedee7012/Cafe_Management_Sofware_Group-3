@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -11,7 +11,7 @@ namespace Cafeteria.DTO
     {
         public Account(string userName, string fullName, string dateofbirth, int type, string passWord, string image)
         {
-            this.UserName = userName;
+            this.UserName = userName;            
             this.FullName = fullName;
             this.DateofBirth = dateofbirth;
             this.Type = type;
